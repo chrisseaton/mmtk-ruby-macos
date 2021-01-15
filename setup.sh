@@ -7,7 +7,8 @@ git clone https://github.com/angussidney/ruby
 cp /var/mmtk/libmmtk_ruby.so ruby
 pushd ruby
 autoconf
-./configure --prefix=$PWD/build
+export LD_LIBRARY_PATH=$PWD
+CFLAGS="-O0 -ggdb3 -DUSE_THIRD_PARTY_HEAP -DUSE_TRANSIENT_HEAP=0" ./configure --prefix=$PWD/build
 make install
 PATH=$PWD/build/bin:$PATH
 popd
