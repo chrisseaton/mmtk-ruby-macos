@@ -4,7 +4,7 @@ sudo apt-get update
 sudo apt-get install -y autoconf bison build-essential clang git libssl-dev ruby
 
 git clone https://github.com/angussidney/ruby
-cp /var/mmtk/libmmtk_ruby.so-release ruby/libmmtk_ruby.so
+cp /var/mmtk/libmmtk_ruby.so-debug ruby/libmmtk_ruby.so
 pushd ruby
 autoconf
 export LD_LIBRARY_PATH=$PWD
